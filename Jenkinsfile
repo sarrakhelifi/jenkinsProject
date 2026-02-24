@@ -20,7 +20,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarScanner') {  // must match Jenkins configuration
+                withSonarQubeEnv('SonarQubeServer') {
                     sh """
                         mvn sonar:sonar \
                         -Dsonar.projectKey=student-management \
